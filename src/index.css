@@ -1,0 +1,160 @@
+/* Reset */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Take Silk's wrapper out of layout */
+.app-wrapper > div:first-child {
+  position: fixed !important;
+  inset: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -999 !important;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Ensure canvas fills screen */
+.app-wrapper > div:first-child canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Foreground content */
+.app-content {
+  position: relative;
+  z-index: 1;
+}
+
+.app-content {
+  font-family: "Quicksand", sans-serif;
+  color: #f8f4f4;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.nav-bar {
+  display: flex;
+  margin: 10px 10px 10px 10px;
+  flex-direction: row;
+  justify-content: right;
+  max-height: 25%;
+}
+.nav-links {
+  max-width: 75%;
+  max-height: 75%;
+  display: flex;
+  height: 75%;
+  gap: 30px;
+  padding-right: 12px;
+}
+.nav-links a {
+  font-size: 1rem;
+  font-weight: 800;
+  position: relative;
+  color: bisque;
+  text-decoration: none;
+  padding: 4px 4px 4px 4px;
+}
+.nav-links a:hover {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(255, 199, 130);
+  transition: 100ms;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px;
+  width: 100vw;
+  max-width: 1300px;
+  border: 12px;
+  border-radius: 12px;
+  border-color: beige;
+}
+.home-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.name {
+  align-items: center;
+}
+.profile {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+  border: 3px solid #020202;
+  box-shadow: -1px 2px 6px rgb(60, 58, 55);
+  object-fit: cover;
+}
+.profile:hover {
+  box-shadow: -1px 2px 6px rgb(255, 255, 255);
+  transition: 500ms;
+}
+.name {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+.name:hover {
+  text-shadow: -1px 3px 2px rgb(197, 7, 36);
+  transition: 1000ms;
+}
+.about {
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 20px;
+}
+.projects {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80vw;
+  max-width: 1200px;
+  margin-left: 70px;
+  padding-left: 30px;
+  border: 3px solid rgb(236, 212, 159);
+  border-radius: 20px;
+}
+.experience {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  padding-top: 0;
+  margin-bottom: 42px;
+  color: bisque;
+  text-decoration: none;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  background-color: black;
+  height: 35vh;
+  max-height: 800px;
+}
+.main-line {
+  width: 45%;
+  font-size: 37px;
+  padding-left: 60px;
+  font-family: "Quicksand", sans-serif;
+}
