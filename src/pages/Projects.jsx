@@ -1,37 +1,32 @@
-/*import capgemini from "../assets/capgemini-Logo.wine.png";
-import accenture from "../assets/accenture.jpg";
-import infosys from "../assets/infosys2157.jpg";
-
-const data = [
-  { id: 1, img: { capgemini }, time: "Sep2020 - Oct2022", tech: "Linux" },
-  { id: 2, img: { infosys }, time: "Oct2022 - Oct2024", tech: "" },
-  { id: 3, img: { accenture }, time: "Oct2024-Present", tech: "" },
+const skills = [
+  { id: 1, skill: "DevOps" },
+  { id: 2, skill: "Git" },
+  { id: 3, skill: "SQL" },
+  { id: 4, skill: "Node.js" },
+  { id: 5, skill: "Python" },
+  { id: 6, skill: "C" },
+  { id: 7, skill: "AngularJS" },
+  { id: 8, skill: "MongoDB" },
+  { id: 9, skill: "AWS" },
+  { id: 10, skill: "Linux" },
+  { id: 11, skill: "LLM" },
+  { id: 12, skill: "CI/CD" },
 ];
-
 export default function Projects() {
   return (
     <div className="projects">
-      <div className="timeline"></div>
-      <Card />
+      <div className="skills">
+        <h1 className="skill-headline">Skills</h1>
+        <div>
+          {skills.map((skill) => (
+            <Card skill={skill.skill} key={skill.id} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
 
-function Card({ img, time, tech }) {
-  return (
-    <div className="card">
-      <div className="logo">
-        <img src={img} alt="comp-logo" />
-      </div>
-      <div className="card-content">
-        <span className="time">{time}</span>
-        <p>Tech used</p>
-        <p>{tech}</p>
-      </div>
-    </div>
-  );
-}
-*/
-export default function Projects() {
-  return <h1>Projects</h1>;
+function Card({ skill }) {
+  return <div className="card">{skill}</div>;
 }
